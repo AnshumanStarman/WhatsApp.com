@@ -232,89 +232,95 @@ div#bap4 {
 
 /*Footer*/
 
-.foot-container {
-  background: #273443;
-  height: 270px;
+.footer {
+  height: 280px;
   width: 100%;
-}
-
-.inner-foot-container {
-  height: 100%;
-  width: 1050px;
-  margin: 0px auto;
+  background-color: #273443;
 
   display: flex;
-  align-items: flex-start;
-  justify-content: space-evenly;
-  flex-wrap: wrap;
-  flex-direction: column;
 }
 
-.foot-item {
-  color: rgba(255, 255, 255, 0.6);
-  font-size: 14px;
-  font-weight: 400;
-}
+.footer-container {
+  width: 1130px;
+  height: 70%;
+  margin: auto;
 
-#foot-item {
-  margin: 20px 0px 0px 0px;
   display: flex;
-  flex-direction: row;
-
-  flex-wrap: wrap;
-  justify-content: flex-start;
-  align-items: flex-start;
 }
 
-.item-links {
-  width: 262px;
+.footer-item {
   flex-grow: 1;
+  flex-shrink: 1;
+
+  text-align: left;
 }
 
-.item-links a {
-  line-height: 25px;
-}
-
-.item-links a:hover {
-  text-decoration: underline;
-  color: #fff;
-}
-
-#item-title,
-#item-title,
-#item-title,
-#item-title {
-  margin: 0px 0px 20px 0px;
-  color: rgba(255, 255, 255, 0.6);
+.footer-item .footer-label {
   font-size: 12px;
   font-weight: 600;
   text-transform: uppercase;
   line-height: 14px;
   letter-spacing: 0.08em;
+  color: rgba(255, 255, 255, 0.6);
+  margin: 0 0 22px 0;
 }
 
-/* Copyright Section */
+.footer-item li {
+  font-size: 14px;
+  font-weight: 400;
+  margin: 0 0 6px 0;
+  color: #fff;
+  list-style: none;
+}
+
+.footer-item a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.footer-item a:hover {
+  text-decoration: underline;
+}
+
+.cr {
+  height: 60px;
+  width: 100%;
+  background: #232f3c;
+
+  display: flex;
+}
 
 .cr-container {
-  background: #232f3c;
-  width: 100%;
-  height: 62px;
-}
-
-.inner-cr-container {
   height: 100%;
-  width: 1050px;
+  width: 1130px;
   margin: 0 auto;
-  font-size: 14px;
-  line-height: 16px;
-  color: rgba(255, 255, 255, 0.6);
 
   display: flex;
   align-items: center;
 }
 
-#cr {
+.cr-item {
   text-align: left;
-  flex-basis: 262px;
-  flex-wrap: wrap;
+}
+
+.cr-item a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.cr-item li {
+  font-size: 14px;
+  font-weight: 400;
+  list-style: none;
+}
+
+#cr-item-1 {
+  flex-grow: 1;
+
+  color: rgba(255, 255, 255, 0.6);
+}
+
+#cr-item-2 {
+  flex-grow: 6;
+  margin: 0 15px 0 0;
 }
