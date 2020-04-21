@@ -11,6 +11,16 @@ a {
   text-decoration: none;
 }
 
+/* use even more specific css, example
+
+header.container {
+
+}
+
+1. this way one would no that you are talking about the headers container
+2. Optionally You can also change the class names and make them more meaningfull, example .header-container
+
+*/
 .container {
   display: flex;
   height: 91px;
@@ -20,11 +30,18 @@ a {
 
 .inner-container {
   width: 1070px;
+  /* never use fix widths, plesae remove this */
+  /* if you want to use fix width then it should always come with media queries  */
+  /* please free to ask any questions */
   height: 100%;
   margin: 0 auto;
   color: #fff;
   font-size: 13px;
   text-transform: uppercase;
+  /* good job using text transform: */
+  /* but, you have used text-transform for the entire header, and because of that you are using text-transform: none; */
+  /* in the other place. Better way would be to use text-transform wherever it is :required */
+
   font-weight: 500;
   display: flex;
   flex-wrap: wrap;
@@ -103,10 +120,13 @@ a {
 .block-1 {
   display: grid;
   grid-template-columns: 7fr 6fr;
+  /* good  attempt at grid layout */
+  /* why have you used 7fr and 6fr ? */
 }
 
 .block-1a {
   margin: 165px 30px 0px 365px;
+  /* bhai dont give margins like that, you will face many problems while making it responsive */
   display: flex;
   flex-direction: column;
 }
@@ -117,12 +137,14 @@ a {
 
 .block-1b {
   margin: 56px 0px 0px 0px;
+  /* bhai dont give margins like that, you will face many problems while making it responsive */
 }
 
 /* Section 2 */
 
 .block-2 {
   margin: 40px;
+  /* you dont need this margin, refer the orignal website */
   text-align: center;
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -132,6 +154,7 @@ a {
 
 .block-2a {
   border: 0.5px solid #d0e9ea;
+  /* dont use large paddings, try and use small padding values and use more and more css for positioning items */
   padding: 75px 88px 0px 88px;
   background: #d0e9ea;
   display: flex;
@@ -163,6 +186,7 @@ a {
 #bbp3 {
   margin: 0px 0 14px 0;
   font-size: 25px;
+  /* dont use line height in pixels */
   line-height: 28px;
   font-weight: 300;
   color: rgba(40, 43, 46, 0.9);
@@ -198,9 +222,12 @@ a {
 }
 
 div#bap4 {
+  /* good work */
   overflow: hidden;
 }
 
+/* i didnt understand how the image is flowing outside, basically how did you position the image */
+/* good work, simple CSS and good result */
 #bap4 img {
   width: 310px;
 }
@@ -234,6 +261,7 @@ div#bap4 {
 
 .footer {
   height: 280px;
+  /* dont use fixed height value */
   width: 100%;
   background-color: #273443;
 
@@ -241,17 +269,17 @@ div#bap4 {
 }
 
 .footer-container {
+  /* bhai use width with media queries */
   width: 1130px;
   height: 70%;
+  /* i actually tried removing this height value, nothing changed, I guess we can remove this */
   margin: auto;
-
   display: flex;
 }
 
 .footer-item {
   flex-grow: 1;
   flex-shrink: 1;
-
   text-align: left;
 }
 
@@ -315,12 +343,40 @@ div#bap4 {
 }
 
 #cr-item-1 {
+  /* instead of using flex-grow so much, start using width, max-width and flex-basis */
+
   flex-grow: 1;
 
   color: rgba(255, 255, 255, 0.6);
 }
 
 #cr-item-2 {
+  /* instead of using flex-grow so much, start using width, max-width and flex-basis */
+  /* this way you will have more control */
+  /* think this way the complete width is 100% */
+  /* now you can divide this width among different blocks */
   flex-grow: 6;
   margin: 0 15px 0 0;
 }
+
+/* please have a look at this */
+
+example css for last line of footer
+
+/* .cr-container {
+  display: flex;
+  margin: 0 auto;
+  width: 80%;
+}
+
+.cr-container:first-child {
+  width: 25%;
+  max-width: 25%;
+  flex-basis: 25%;
+}
+
+.cr-container.cr-item {
+  width: 75%;
+  max-width: 75%;
+  flex-basis: 75%;
+} */
