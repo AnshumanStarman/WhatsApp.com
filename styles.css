@@ -270,7 +270,7 @@ div#bap4 {
 
 .footer-container {
   /* bhai use width with media queries */
-  width: 1130px;
+  width: 75%;
   height: 70%;
   /* i actually tried removing this height value, nothing changed, I guess we can remove this */
   margin: auto;
@@ -320,11 +320,12 @@ div#bap4 {
 
 .cr-container {
   height: 100%;
-  width: 1130px;
+  width: 75%;
   margin: 0 auto;
 
   display: flex;
   align-items: center;
+  justify-content: flex-start;
 }
 
 .cr-item {
