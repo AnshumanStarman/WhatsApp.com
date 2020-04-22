@@ -272,7 +272,7 @@ div#bap4 {
   /* bhai use width with media queries */
   width: 75%;
   height: 70%;
-  /* i actually tried removing this height value, nothing changed, I guess we can remove this */
+
   margin: auto;
   display: flex;
 }
