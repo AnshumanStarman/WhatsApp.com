@@ -186,7 +186,6 @@ header.container {
 #bbp3 {
   margin: 0px 0 14px 0;
   font-size: 25px;
-  /* dont use line height in pixels */
   line-height: 28px;
   font-weight: 300;
   color: rgba(40, 43, 46, 0.9);
